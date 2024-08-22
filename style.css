@@ -1,0 +1,443 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/********************* Main container ************************************/
+.container {
+
+    display: flex;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/*********************** fixed left block *********************************/
+.fixed {
+    width: 225px;
+    height: 100%;
+    background-color: rgb(16, 16, 14);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    box-sizing: border-box;
+
+}
+
+.fixed .left1 {
+    position: absolute;
+    top: 40px
+}
+
+.fixed .left2 {
+    position: relative;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    margin: 70px 0;
+
+}
+
+.fixed .left2 .course,
+.fixed .left2 .learning {
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.fixed .left div a {
+    text-decoration: none;
+    padding: 0 8px 0 0;
+}
+
+
+.fixed .left3 {
+    position: relative;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    margin: 70px 0;
+
+}
+
+.fixed .left3 .recognized,
+.fixed .left3 .contact,
+.fixed .left3 .logout {
+    padding: 5px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+}
+
+
+/**************************** movable right block *****************************/
+
+.movable {
+    position: absolute;
+    left: 225px;
+    background-color: rgb(5, 5, 5);
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 225px);
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+/* header part */
+header .item1 {
+    height: 75px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0 10px;
+
+}
+
+.item1 input {
+
+    background-color: black;
+    width: 400px;
+    height: 45px;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: 2px solid rgba(255, 255, 255, .55);
+    border-radius: 10px;
+}
+
+.fa-magnifying-glass {
+    position: relative;
+    right: 40px;
+    color: rgba(255, 255, 255, .55);
+
+}
+
+.item1 .head_right {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+
+/* image scroll part */
+
+.item2 {
+
+   
+    margin: 0 30px;
+    background : url("images/banner_1.webp") no-repeat ;
+    height: 25vw;
+    background-position:center;
+    background-size: cover;
+    
+
+}
+
+
+/* navigation bar  */
+
+.item3 {
+    margin: 30px;
+}
+
+.item3 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.item3 ul li {
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: rgba(63, 60, 60,.65);
+    border-radius: 5px;
+}
+
+.item3 ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .80);
+}
+
+/* main content Grid system item 4 */
+
+.item4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "one two three four"
+        "five six seven eight"
+        "nine  ten .  . ";
+    grid-gap: 45px;
+    margin: 30px;
+}
+
+/*************  common  format **************/
+.content {
+    width: 100%;
+    /* height: 100%; */
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.content .img {
+    height: 100%;
+    background-position: top left;
+    background-size: 100% 100%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.content .base {
+    height: 65px;
+    background-color: #37546E;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.content .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+    height: 50px;
+}
+
+.content .heading h4 {
+    padding: 10px 0 5px 0;
+    font-size: 16px;
+}
+
+.content .heading p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .55);
+}
+
+.base {
+    font-size: 13px;
+    padding: 0 10px;
+}
+
+.base .play {
+    padding: 0 5px;
+}
+
+/* ************************************************ */
+/* main content1 */
+.content1 {
+    grid-area: one;
+}
+
+.content1 .img {
+    background-image: url("images/100k.webp");
+}
+
+
+/* main content2 */
+
+.content2 {
+    grid-area: two;
+}
+
+.content2 .img {
+    background-image: url("images/webdesign.webp");
+}
+
+
+
+/* main content3 */
+
+.content3 {
+    grid-area: three;
+}
+
+.content3 .img {
+    background-image: url("images/webdevelopment.webp");
+}
+
+
+/* main content 4 */
+
+.content4 {
+    grid-area: four;
+}
+
+.content4 .img {
+    background-image: url("images/python.webp");
+}
+
+
+/* main content 5 */
+
+
+.content5 {
+    grid-area: five;
+}
+
+.content5 .img {
+    background-image: url("images/react.webp");
+}
+
+
+/* main content 6 */
+
+
+.content6 {
+    grid-area: six;
+
+}
+
+.content6 .img {
+    background-image: url("images/DSA.webp");
+}
+
+
+
+/* main content 7 */
+
+
+.content7 {
+    grid-area: seven;
+
+}
+
+.content7 .img {
+    background-image: url("images/python_django.webp");
+}
+
+
+/* main content 8 */
+
+
+.content8 {
+    grid-area: eight;
+}
+
+.content8 .img {
+    background-image: url("images/flutter.webp");
+    background-position: top left;
+}
+
+/* main content 9 */
+
+
+
+.content9 {
+    grid-area: nine;
+}
+
+.content9 .img {
+    background-image: url("images/git.webp");
+}
+
+/* main content 10 */
+
+
+
+.content10 {
+    grid-area: ten;
+}
+
+.content10 .img {
+    background-image: url("images/game.webp");
+}
+
+
+/* main content ends */
+
+/* media query */
+@media (max-width:1200px){
+
+    .item4 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: "one two three "
+            "four five six "
+            "seven eight nine"
+             "  ten .  . ";
+        grid-gap: 45px;
+        margin: 30px;
+    }
+
+}
+
+@media (max-width:990px){
+
+    .item4 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: "one two  "
+            "three four  "
+            "five six"
+            "seven eight"
+             "  nine  ten  ";
+        grid-gap: 45px;
+        margin: 30px;
+    }
+    .item1 input {
+
+        width: 200px;
+        height: 45px;
+        font-size: 15px;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+    .item2{
+        display: none;
+    }
+
+}
+@media (max-width:768px){
+
+    .item4 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: "one ""two"
+            "three"" four "
+            "five ""six"
+            "seven"" eight"
+             "  nine"" ten ";
+        grid-gap: 45px;
+        margin: 30px;
+    }
+    .fixed {
+        width: 170px;
+        height: 100%;
+    }
+    .movable {
+        position: absolute;
+        left: 168px;
+        width: calc(100vw - 170px);
+        height: 100%;
+       
+    }
+    
+    
+}
+
